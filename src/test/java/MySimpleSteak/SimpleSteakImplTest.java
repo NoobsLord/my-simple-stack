@@ -1,47 +1,39 @@
 package MySimpleSteak;
 
-import org.jboss.arquillian.container.test.api.Deployment;
-import org.jboss.arquillian.junit.Arquillian;
-import org.jboss.shrinkwrap.api.ShrinkWrap;
-import org.jboss.shrinkwrap.api.asset.EmptyAsset;
-import org.jboss.shrinkwrap.api.spec.JavaArchive;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import MySimpleSteak.*;
 import static org.junit.Assert.*;
 
-@RunWith(Arquillian.class)
+
 public class SimpleSteakImplTest {
-    @Deployment
-    public static JavaArchive createDeployment() {
-        return ShrinkWrap.create(JavaArchive.class)
-                .addClass(SimpleSteakImpl.class)
-                .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
-    }
+
+    SimpleSteak simpleSteak;
 
     @Before
     public void setUp() throws Exception {
-        simpleStack = new SimpleSstackImpl();
+        simpleSteak = new SimpleSteakImpl();
         System.out.println("Préparation du Bourreau");
     }
 
     @Test
     public void TestIsEmpty() throws Exception{
-        Assert.assertEquals(true, simpleStack.isEmpty());
+        Assert.assertEquals(true, simpleSteak.isEmpty());
         String element1 = "Belzébuth";
-        simpleStack.push(new Item(new String(element1)));
-        Assert.assertEquals(false, simpleStack.isEmpty());
+        simpleSteak.push(new Item(new String(element1)));
+        Assert.assertEquals(false, simpleSteak.isEmpty());
     }
 
     @Test
     public void TestGetSize() throws Exception{
-        Assert.assertEquals(0, simpleStack.getSize());
+        Assert.assertEquals(0, simpleSteak.getSize());
         String element1 = "Baphomet";
-        simpleStack.push(new Item(new String(element1)));
-        simpleStack.push(new Item(new Sting(element1 + " <3")));
-        Assert.assertEquals(2, simpleStack.getSize());
+        simpleSteak.push(new Item(new String(element1)));
+        simpleSteak.push(new Item(new String(element1 + " <3")));
+        Assert.assertEquals(2, simpleSteak.getSize());
     }
 
     @Test

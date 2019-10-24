@@ -1,6 +1,14 @@
 package MySimpleSteak;
 
 import java.util.EmptyStackException;
+import java.util.Stack;
+
+/**
+ *
+ * Created by VGTO on 24/10/2k19
+ *
+ *  pouet pouet #3
+ */
 
 public class SimpleSteakImpl implements SimpleSteak{
 
@@ -20,7 +28,7 @@ public class SimpleSteakImpl implements SimpleSteak{
     }
 
     public Item peek() throws EmptyStackException {
-        return (Item) wrappedStack.push(item);
+        return (Item) wrappedStack.peek();
     }
 
     @Override

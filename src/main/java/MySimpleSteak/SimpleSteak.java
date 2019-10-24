@@ -1,6 +1,6 @@
 package MySimpleSteak;
 
-import sun.invoke.empty.Empty;
+//import sun.invoke.empty.Empty;
 
 import java.util.EmptyStackException;
 

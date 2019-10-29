@@ -27,6 +27,10 @@ public class SimpleSteakImplTest {
         Assert.assertEquals(false, simpleSteak.isEmpty());
     }
 
+    /**
+     * exigence #2
+     *
+     */
     @Test
     public void TestGetSize() throws Exception{
         Assert.assertEquals(0, simpleSteak.getSize());

@@ -8,6 +8,7 @@ import java.util.Stack;
  * Created by VGTO on 24/10/2k19
  *
  *  pouet pouet #3
+ *  mdr c'est des barres
  */
 
 public class SimpleSteakImpl implements SimpleSteak{
